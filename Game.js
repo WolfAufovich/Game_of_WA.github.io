@@ -1,3 +1,6 @@
+setTimeout(()=>{
+    alert('Please wait a few seconds for the website to load the textures.')
+},500)
 var player = document.getElementById('player');
 var chest = document.getElementById('chest');
 var container = document.getElementById('container');
