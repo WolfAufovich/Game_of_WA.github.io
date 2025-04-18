@@ -143,7 +143,7 @@ function Reloading_the_pistol(){
             i.classList.remove('not_empty');
             i.classList.add('empty');
             i.querySelector('span').innerHTML = '';
-            items[0].count_bullet = 7;
+            pistol.count_bullet = 7;
             document.getElementById('pistol').querySelector('span').innerHTML = pistol.count_bullet;
             firstReloadingPistol = 1;
             new Audio('sounds/Reloading_the_pistol.mp3').play();
