@@ -1,0 +1,525 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: content-box;
+}
+/* body{
+     cursor: url('textures/cursor/cursor_11zon.png'),default;  
+} */
+
+#container{
+    /* perspective: 100px; */
+    transform-style: preserve-3d;
+    /* transform: rotateX(-5deg); */
+    position: relative;
+    top: 150px;
+    width: 1240px;
+    height: 580px;
+    border: 2px solid black;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+    background-image: url('textures/background/11zon_cropped (11).png');
+    background-size: 100% 100%;
+    user-select: none;
+}
+.inventory-sect{
+    width: 500px;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    top: 15px;
+    left: 20px;
+    gap: 10px;
+    /*background: red;*/
+    align-items: center;
+}
+.inventory-sect div{
+    box-sizing: content-box;
+    width: 50px;
+    height: 50px;
+    background: rgb(52, 83, 187);
+    border: 2px black solid;
+    border-radius: 15px;
+    opacity: 0.6;
+    transition:  0.2s linear;
+    background-size: 100% 100%;
+}
+.inventory-sect div:hover{
+    cursor: pointer;
+    /* cursor: url('textures/cursor/11zon_cropped (23)_11zon.png'),default; */
+}
+.inventory-sect div.active_cell{
+    width: 55px;
+    height: 55px;
+    background-color: orange;
+}
+#Reloading_the_pistol_Announce_sect{
+    width: 350px;
+    height: 50px;
+    display:none;
+    position: absolute;
+    top: 15px;
+    left: 350px;
+    opacity: 0.8;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: italic;
+    color: white;
+    animation: blinker 2s linear infinite; 
+}
+@keyframes blinker {
+50% {
+    opacity: 0;
+}
+
+}
+#Reloading_the_pistol_Announce_sect span{
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-style: initial;
+}
+
+#player{
+    width: 100px;
+    height: 150px;
+    position: relative;
+    top: 430px;
+    left: 390px;
+    z-index: 50;
+    background-image: url('textures/player/running animation/stand/stand-right.png');
+    background-size: 100% 100%;
+    perspective: 100px;
+}
+
+.run_left{
+    animation: run_left 1s step-end infinite;
+}
+@keyframes run_left{
+    0%{
+        background-image: url('textures/player/running animation/new left/art1.png');
+    }
+    10%{
+
+        background-image: url('textures/player/running animation/new left/art2.png');
+    }
+    20%{
+
+        background-image: url('textures/player/running animation/new left/art3.png');
+    }
+    30%{
+
+        background-image: url('textures/player/running animation/new left/art4.png');
+    }
+    40%{
+
+        background-image: url('textures/player/running animation/new left/art5.png');
+    }
+    50%{
+
+        background-image: url('textures/player/running animation/new left/art6.png');
+    }
+    60%{
+
+        background-image: url('textures/player/running animation/new left/art7.png');
+    }
+    70%{
+
+        background-image: url('textures/player/running animation/new left/art8.png');
+    }
+    80%{
+  
+        background-image: url('textures/player/running animation/new left/art9.png');
+    }
+    90%{
+      
+        background-image: url('textures/player/running animation/new left/art10.png');
+    }
+    100%{
+      
+        background-image: url('textures/player/running animation/new left/art1.png');
+    }
+}
+.run_right{
+    animation: run_right 1s step-end infinite;
+}
+@keyframes run_right{
+    0%{
+
+        background-image: url('textures/player/running animation/new right/art1.png');
+    }
+    10%{
+
+        background-image: url('textures/player/running animation/new right/art2.png');
+    }
+    20%{
+
+        background-image: url('textures/player/running animation/new right/art3.png');
+    }
+    30%{
+
+        background-image: url('textures/player/running animation/new right/art4.png');
+    }
+    40%{
+
+        background-image: url('textures/player/running animation/new right/art5.png');
+    }
+    50%{
+
+        background-image: url('textures/player/running animation/new right/art6.png');
+    }
+    60%{
+
+        background-image: url('textures/player/running animation/new right/art7.png');
+    }
+    70%{
+
+        background-image: url('textures/player/running animation/new right/art8.png');
+    }
+    80%{
+  
+        background-image: url('textures/player/running animation/new right/art9.png');
+    }
+    90%{
+      
+        background-image: url('textures/player/running animation/new right/art10.png');
+    }
+    100%{
+      
+        background-image: url('textures/player/running animation/new right/art1.png');
+    }
+}
+
+.jump_right{
+    animation: jump_right 0.8s step-end; 
+}
+@keyframes jump_right{
+    0%{
+        top: 440px;
+        background-image: url('textures/player/jump animation/right/art1.png');
+    }
+    10%{
+        top:424px;
+        background-image: url('textures/player/jump animation/right/art2.png');
+    }
+    20%{
+        top:408px;
+        background-image: url('textures/player/jump animation/right/art3.png');
+    }
+    30%{
+        top: 392px;
+        background-image: url('textures/player/jump animation/right/art4.png');
+    }
+    40%{
+        top: 376px;
+        background-image: url('textures/player/jump animation/right/art5.png');
+    }
+    50%{
+        top: 360px;
+        background-image: url('textures/player/jump animation/right/art6.png');
+    }
+    60%{
+        top: 376px;
+        background-image: url('textures/player/jump animation/right/art7.png');
+    }
+    70%{
+        top: 392px;
+        background-image: url('textures/player/jump animation/right/art8.png');
+    }
+    80%{
+        top:408px;
+        background-image: url('textures/player/jump animation/right/art9.png');
+    }
+    90%{
+        top:424px;
+        background-image: url('textures/player/jump animation/right/art10.png');
+    }
+    100%{
+        top: 440px;
+        background-image: url('textures/player/jump animation/right/art1.png');
+    }
+}
+.jump_left{
+    animation: jump_left 0.8s step-end; 
+}
+@keyframes jump_left{
+    0%{
+        top: 430px;
+        background-image: url('textures/player/jump animation/left/art1.png');
+    }
+    10%{
+        top:424px;
+        background-image: url('textures/player/jump animation/left/art2.png');
+    }
+    20%{
+        top:408px;
+        background-image: url('textures/player/jump animation/left/art3.png');
+    }
+    30%{
+        top: 392px;
+        background-image: url('textures/player/jump animation/left/art4.png');
+    }
+    40%{
+        top: 376px;
+        background-image: url('textures/player/jump animation/left/art5.png');
+    }
+    50%{
+        top: 360px;
+        background-image: url('textures/player/jump animation/left/art6.png');
+    }
+    60%{
+        top: 376px;
+        background-image: url('textures/player/jump animation/left/art7.png');
+    }
+    70%{
+        top: 392px;
+        background-image: url('textures/player/jump animation/left/art8.png');
+    }
+    80%{
+        top:408px;
+        background-image: url('textures/player/jump animation/left/art9.png');
+    }
+    90%{
+        top:424px;
+        background-image: url('textures/player/jump animation/left/art10.png');
+    }
+    100%{
+        top: 430px;
+        background-image: url('textures/player/jump animation/left/art1.png');
+    }
+}
+
+#chest{
+    width: 50px;
+    height: 50px;
+    background-image: url('textures/chest/pixel-chest.png');
+    background-size: 100% 100%;
+    position: relative;
+    top: 530px;
+    left: 700px;
+}
+#chest:hover{
+    /* cursor: url('textures/cursor/11zon_cropped (23)_11zon.png'),default; */
+    cursor: pointer;
+}
+
+#content-chest{
+    position: absolute;
+    top: 80px;
+    left:440px;
+    width: 360px;
+    height: 420px;
+    background: rgb(52, 83, 187);
+    border: 2px gold solid;
+    border-radius: 10px;
+    display: none;
+    opacity: 0.9;
+    z-index: 95;
+    flex-wrap: wrap;
+}
+#cancel-chest{
+    width: 30px;
+    height: 30px;
+    position:absolute;
+    top: 14px;
+    left:320px;
+    user-select: none;
+}
+#cancel-chest:hover{
+    cursor: pointer;
+    /* cursor: url('textures/cursor/11zon_cropped (23)_11zon.png'),default; */
+}
+.chest-sell-sect{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    background: rgb(144, 170, 28);
+    padding: 20px;
+    
+    display: flex;
+    top: 20px;
+    left: 30px;
+    gap: 40px;
+    flex-direction: wrap;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+.chest-sell{  
+    background: green;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    transition:  0.2s linear;
+    background-size: 100% 100%;
+}
+.chest-sell:hover{
+    /* cursor: url('textures/cursor/11zon_cropped (23)_11zon.png'),default; */
+    cursor: pointer;
+    box-shadow: inset 0 0 0 2.5px black;
+}
+
+#pistol{
+    background-image: url('textures/items/icon-pistol.png');
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#bullet1{
+    background-image: url('textures/items/icon-bullet.png');
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#bullet2{
+    background-image: url('textures/items/icon-bullet.png');
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#bullet3{
+    background-image: url('textures/items/icon-bullet.png');
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#gold_key{
+    background-image: url('textures/items/icon-gold-key.png');
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#princess{
+    width: 95px;
+    height: 135px;
+    position: relative;
+    top: 445px;
+    left: 700px;
+    background-image: url('textures/princess/stand/stand-left.png');
+    background-size: 100% 100%;
+    transform: rotateY(0deg);
+    /* -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
+}
+
+/* @keyframes return_around_right{
+    100%{
+        transform: rotateY(180deg);
+    }
+}
+@keyframes return_around_left{
+    100%{
+        transform: rotateY(-180deg);
+    }
+} */
+#dialogue_frame_princess{
+    width: 180px;
+    height: 110px;
+    position: absolute;
+    display: flex;
+    top: 295px;
+    font-size: 19px;
+    font-weight: 600;
+    font-style: italic;
+    font-weight: 600;
+    border-radius:5px;
+    text-align: center;
+    padding: 10px 20px;
+    opacity: 0.9;
+}
+
+ #dialogue_frame_princess p{
+    margin: auto;
+    background-image: linear-gradient(-90deg, rgb(255, 255, 255,0), rgba(255, 255, 255, 0));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient_text 0.7s linear;
+    animation-fill-mode: forwards;
+ /*    word-break: break-all; */
+    /* animation-delay: 0.1s; */
+} 
+@keyframes gradient_text{
+    0%{
+        background-image: linear-gradient(-90deg, rgb(255, 255, 255,0), rgba(255, 255, 255, 0));
+    }
+    10%{
+        background-image: linear-gradient(-90deg, rgb(255, 255, 255,0), rgba(255, 255, 255, 0.2));
+    }
+    20%{
+        background-image: linear-gradient(-90deg, rgb(255, 255, 255,0), rgba(255, 255, 255, 0.4));
+    }
+    30%{
+        background-image: linear-gradient(-90deg, rgb(255, 255, 255,0), rgba(255, 255, 255, 0.6));
+    }
+    40%{
+        background-image: linear-gradient(-90deg, rgb(255, 255, 255,0), rgba(255, 255, 255, 0.8));
+    }
+    50%{
+        background-image: linear-gradient(-90deg, rgb(255, 255, 255,0), rgba(255, 255, 255, 1));
+    }
+    60%{
+        background-image: linear-gradient(-90deg, rgb(255, 255, 255,0.2), rgba(255, 255, 255, 1));
+    }
+    70%{
+        background-image: linear-gradient(-90deg, rgb(255, 255, 255,0.4), rgba(255, 255, 255, 1));
+    }
+    80%{
+        background-image: linear-gradient(-90deg, rgb(255, 255, 255,0.6), rgba(255, 255, 255, 1));
+    }
+    90%{
+        background-image: linear-gradient(-90deg, rgb(255, 255, 255,0.8), rgba(255, 255, 255, 1));
+    }
+    100%{
+        background-image: linear-gradient(-90deg, rgb(255, 255, 255,1), rgba(255, 255, 255, 1));
+    }
+}
+
+#dialogue_frame_princess span{
+    all: initial;
+    position: absolute;
+    top: 95px;
+    left: 93px;
+    margin: auto;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-style: initial;
+    color: white;
+    font-size: 12px;
+}
+
+#announce-of-acting{
+    user-select: none;
+    position: fixed;
+    display: none;
+    padding: 20px;
+    width: 200px;
+    height: 40px;
+    top: 20px;
+    left: 960px;
+    font-size: 26px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    border-left: 5px gold dashed;
+    border-bottom: 5px gold dashed;
+    text-align: center;
+    color: gold;
+    align-items: center;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes opacity_out{
+    0%{
+        opacity: 1;
+        display: flex;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+
+

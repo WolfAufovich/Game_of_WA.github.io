@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Ты сюда бегать пришёл, так что бегай</title>
+    <link rel="stylesheet" type="text/css" href="Game.css">
+</head>
+<body>
+    <div id="container">
+
+        <div class="inventory-sect">
+            <div class="active_cell empty">
+                <span style="position: relative; left:5px"></span>
+            </div>
+            <div class="noactive_cell empty">
+                <span style="position: relative; left:5px"></span>
+            </div>
+            <div class="noactive_cell empty">
+                <span style="position: relative; left:5px"></span>
+            </div>
+            <div class="noactive_cell empty">
+                <span style="position: relative; left:5px"></span>
+            </div>
+            <div class="noactive_cell empty">
+                <span style="position: relative; left:5px"></span>
+            </div>
+        </div>
+
+        <div id="Reloading_the_pistol_Announce_sect">
+            <p>Press <span>R</span> to reloading the pistol.</p>
+        </div>
+
+        <div id="player"></div>
+
+        <div id="chest" style="left:700px"></div>
+        <div id="content-chest">
+            <div style="display: flex; align-items: center;">
+                <p style="font-size: 35px; margin: auto; user-select: none; position:relative;top:15px;left:95px">Armory box</p>
+                <img src="textures/chest/free-icon-cancel.png" id="cancel-chest" >
+            </div>
+            <div class="chest-sell-sect">
+                <div class="chest-sell not_empty"><span style="position: relative; left:5px"></span></div>
+                <div class="chest-sell not_empty"><span style="position: relative; left:5px"></span></div>
+                <div class="chest-sell not_empty"><span style="position: relative; left:5px"></span></div>
+                <div class="chest-sell not_empty"><span style="position: relative; left:5px"></span></div>
+                <div class="chest-sell empty"><span style="position: relative; left:5px"></span></div>
+                <div class="chest-sell empty"><span style="position: relative; left:5px"></span></div>
+                <div class="chest-sell empty"><span style="position: relative; left:5px"></span></div>
+                <div class="chest-sell empty"><span style="position: relative; left:5px"></span></div>
+                <div class="chest-sell empty"><span style="position: relative; left:5px"></span></div>
+            </div>
+        </div>
+
+        <div id="dialogue_frame_princess"></div>
+        <div id="princess"></div>
+
+        <div id="announce-of-acting"><p>You got the Key.</p></div>
+
+    </div>
+    <script src="Game.js"></script>
+    <script src="my/path/to/multithread.js">
+        var num_threads = 2; var MT = new Multithread(num_threads)
+    </script>
+
+</body>
+</html>
